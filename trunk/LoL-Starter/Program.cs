@@ -15,7 +15,7 @@ namespace LoL_Starter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SartScreen());
+            Application.Run(new LoLStarter());
         }
     }
 }

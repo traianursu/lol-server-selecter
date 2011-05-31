@@ -1,6 +1,6 @@
 ﻿namespace LoL_Starter
 {
-    partial class SartScreen
+    partial class LoLStarter
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.Servers = new System.Windows.Forms.TabControl();
+            this.tabServers = new System.Windows.Forms.TabPage();
+            this.tabSettings = new System.Windows.Forms.TabPage();
+            this.tabAbout = new System.Windows.Forms.TabPage();
+            this.Servers.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // Servers
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(280, 250);
-            this.tabControl1.TabIndex = 0;
+            this.Servers.Controls.Add(this.tabServers);
+            this.Servers.Controls.Add(this.tabSettings);
+            this.Servers.Controls.Add(this.tabAbout);
+            this.Servers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Servers.Location = new System.Drawing.Point(0, 0);
+            this.Servers.Name = "Servers";
+            this.Servers.SelectedIndex = 0;
+            this.Servers.Size = new System.Drawing.Size(344, 322);
+            this.Servers.TabIndex = 0;
             // 
-            // tabPage1
+            // tabServers
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(264, 224);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabServers.Location = new System.Drawing.Point(4, 22);
+            this.tabServers.Name = "tabServers";
+            this.tabServers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabServers.Size = new System.Drawing.Size(277, 224);
+            this.tabServers.TabIndex = 0;
+            this.tabServers.Text = "Servers";
+            this.tabServers.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabSettings
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(272, 224);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabSettings.Location = new System.Drawing.Point(4, 22);
+            this.tabSettings.Name = "tabSettings";
+            this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSettings.Size = new System.Drawing.Size(277, 224);
+            this.tabSettings.TabIndex = 1;
+            this.tabSettings.Text = "Settings";
+            this.tabSettings.UseVisualStyleBackColor = true;
             // 
-            // SartScreen
+            // tabAbout
+            // 
+            this.tabAbout.Location = new System.Drawing.Point(4, 22);
+            this.tabAbout.Name = "tabAbout";
+            this.tabAbout.Size = new System.Drawing.Size(336, 296);
+            this.tabAbout.TabIndex = 2;
+            this.tabAbout.Text = "About";
+            this.tabAbout.UseVisualStyleBackColor = true;
+            // 
+            // LoLStarter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(344, 322);
+            this.Controls.Add(this.Servers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "SartScreen";
+            this.MaximumSize = new System.Drawing.Size(350, 350);
+            this.MinimumSize = new System.Drawing.Size(350, 350);
+            this.Name = "LoLStarter";
             this.Text = "LoL-Starter";
-            this.tabControl1.ResumeLayout(false);
+            this.Servers.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl Servers;
+        private System.Windows.Forms.TabPage tabServers;
+        private System.Windows.Forms.TabPage tabSettings;
+        private System.Windows.Forms.TabPage tabAbout;
     }
 }
 

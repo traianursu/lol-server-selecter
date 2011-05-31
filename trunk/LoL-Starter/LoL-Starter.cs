@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace LoL_Starter
 {
-    public partial class SartScreen : Form
+    public partial class LoLStarter : Form
     {
-        public SartScreen()
+        public LoLStarter()
         {
             InitializeComponent();
         }
