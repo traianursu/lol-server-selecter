@@ -39,21 +39,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEU = new System.Windows.Forms.Button();
             this.tabSettings = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.gbEULang = new System.Windows.Forms.GroupBox();
+            this.rbPL = new System.Windows.Forms.RadioButton();
+            this.rbES = new System.Windows.Forms.RadioButton();
+            this.rbFR = new System.Windows.Forms.RadioButton();
+            this.rbDE = new System.Windows.Forms.RadioButton();
+            this.rbEN = new System.Windows.Forms.RadioButton();
             this.tabAbout = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbAbout = new System.Windows.Forms.RichTextBox();
             this.ttLang = new System.Windows.Forms.ToolTip(this.components);
             this.Servers.SuspendLayout();
             this.tabServers.SuspendLayout();
             this.gbUS.SuspendLayout();
             this.gbEU.SuspendLayout();
             this.tabSettings.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbEULang.SuspendLayout();
             this.tabAbout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,7 +141,7 @@
             // 
             // tabSettings
             // 
-            this.tabSettings.Controls.Add(this.groupBox1);
+            this.tabSettings.Controls.Add(this.gbEULang);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
@@ -150,78 +150,80 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbEULang
             // 
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 140);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "EU-Language";
+            this.gbEULang.Controls.Add(this.rbPL);
+            this.gbEULang.Controls.Add(this.rbES);
+            this.gbEULang.Controls.Add(this.rbFR);
+            this.gbEULang.Controls.Add(this.rbDE);
+            this.gbEULang.Controls.Add(this.rbEN);
+            this.gbEULang.Location = new System.Drawing.Point(8, 6);
+            this.gbEULang.Name = "gbEULang";
+            this.gbEULang.Size = new System.Drawing.Size(97, 140);
+            this.gbEULang.TabIndex = 0;
+            this.gbEULang.TabStop = false;
+            this.gbEULang.Text = "EU-Language";
             // 
-            // radioButton5
+            // rbPL
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 111);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(52, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "pl_PL";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbPL.AutoSize = true;
+            this.rbPL.Location = new System.Drawing.Point(6, 111);
+            this.rbPL.Name = "rbPL";
+            this.rbPL.Size = new System.Drawing.Size(52, 17);
+            this.rbPL.TabIndex = 4;
+            this.rbPL.Text = "pl_PL";
+            this.rbPL.UseVisualStyleBackColor = true;
+            this.rbPL.Click += new System.EventHandler(this.RadioButton_Click);
             // 
-            // radioButton4
+            // rbES
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 88);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(56, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "es_ES";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbES.AutoSize = true;
+            this.rbES.Location = new System.Drawing.Point(6, 88);
+            this.rbES.Name = "rbES";
+            this.rbES.Size = new System.Drawing.Size(56, 17);
+            this.rbES.TabIndex = 3;
+            this.rbES.Text = "es_ES";
+            this.rbES.UseVisualStyleBackColor = true;
+            this.rbES.Click += new System.EventHandler(this.RadioButton_Click);
             // 
-            // radioButton3
+            // rbFR
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(51, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "fr_FR";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbFR.AutoSize = true;
+            this.rbFR.Location = new System.Drawing.Point(6, 65);
+            this.rbFR.Name = "rbFR";
+            this.rbFR.Size = new System.Drawing.Size(51, 17);
+            this.rbFR.TabIndex = 2;
+            this.rbFR.Text = "fr_FR";
+            this.rbFR.UseVisualStyleBackColor = true;
+            this.rbFR.Click += new System.EventHandler(this.RadioButton_Click);
             // 
-            // radioButton2
+            // rbDE
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "de_DE";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbDE.AutoSize = true;
+            this.rbDE.Location = new System.Drawing.Point(6, 42);
+            this.rbDE.Name = "rbDE";
+            this.rbDE.Size = new System.Drawing.Size(58, 17);
+            this.rbDE.TabIndex = 1;
+            this.rbDE.Text = "de_DE";
+            this.rbDE.UseVisualStyleBackColor = true;
+            this.rbDE.Click += new System.EventHandler(this.RadioButton_Click);
             // 
-            // radioButton1
+            // rbEN
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "en_GB";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbEN.AutoSize = true;
+            this.rbEN.Checked = true;
+            this.rbEN.Location = new System.Drawing.Point(6, 19);
+            this.rbEN.Name = "rbEN";
+            this.rbEN.Size = new System.Drawing.Size(58, 17);
+            this.rbEN.TabIndex = 0;
+            this.rbEN.TabStop = true;
+            this.rbEN.Text = "en_GB";
+            this.rbEN.UseVisualStyleBackColor = true;
+            this.rbEN.Click += new System.EventHandler(this.RadioButton_Click);
             // 
             // tabAbout
             // 
-            this.tabAbout.Controls.Add(this.richTextBox1);
+            this.tabAbout.Controls.Add(this.rtbAbout);
             this.tabAbout.Location = new System.Drawing.Point(4, 22);
             this.tabAbout.Name = "tabAbout";
             this.tabAbout.Size = new System.Drawing.Size(336, 296);
@@ -229,15 +231,16 @@
             this.tabAbout.Text = "About";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // rtbAbout
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(8, 245);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(153, 43);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "LoL-Starter v1.0\n\nCopyRight © Jeroen Buyssens";
+            this.rtbAbout.BackColor = System.Drawing.Color.White;
+            this.rtbAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbAbout.Location = new System.Drawing.Point(8, 245);
+            this.rtbAbout.Name = "rtbAbout";
+            this.rtbAbout.ReadOnly = true;
+            this.rtbAbout.Size = new System.Drawing.Size(153, 43);
+            this.rtbAbout.TabIndex = 0;
+            this.rtbAbout.Text = "LoL-Starter v1.0\n\nCopyRight © Jeroen Buyssens";
             // 
             // LoLStarter
             // 
@@ -252,15 +255,15 @@
             this.MinimumSize = new System.Drawing.Size(350, 350);
             this.Name = "LoLStarter";
             this.Text = "LoL-Starter";
-            this.Load += new System.EventHandler(this.LoLStarter_Load_1);
+            this.Load += new System.EventHandler(this.LoLStarter_Load);
             this.Servers.ResumeLayout(false);
             this.tabServers.ResumeLayout(false);
             this.gbUS.ResumeLayout(false);
             this.gbEU.ResumeLayout(false);
             this.gbEU.PerformLayout();
             this.tabSettings.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbEULang.ResumeLayout(false);
+            this.gbEULang.PerformLayout();
             this.tabAbout.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -272,13 +275,13 @@
         private System.Windows.Forms.TabPage tabServers;
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.TabPage tabAbout;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RichTextBox rtbAbout;
+        private System.Windows.Forms.GroupBox gbEULang;
+        private System.Windows.Forms.RadioButton rbPL;
+        private System.Windows.Forms.RadioButton rbES;
+        private System.Windows.Forms.RadioButton rbFR;
+        private System.Windows.Forms.RadioButton rbDE;
+        private System.Windows.Forms.RadioButton rbEN;
         private System.Windows.Forms.GroupBox gbUS;
         private System.Windows.Forms.Button btnUS;
         private System.Windows.Forms.GroupBox gbEU;
