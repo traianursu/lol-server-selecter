@@ -21,10 +21,5 @@ namespace LoLStarter
             ttLang.SetToolTip(lbCurLang, "You can change the preferred language in the settings tab.");
             lbCurLang.Text = "en_GB";
         }
-
-        private void LoLStarter_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

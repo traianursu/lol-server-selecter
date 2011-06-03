@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoLStarter));
             this.Servers = new System.Windows.Forms.TabControl();
             this.tabServers = new System.Windows.Forms.TabPage();
             this.gbUS = new System.Windows.Forms.GroupBox();
@@ -245,6 +246,7 @@
             this.ClientSize = new System.Drawing.Size(344, 322);
             this.Controls.Add(this.Servers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(350, 350);
             this.MinimumSize = new System.Drawing.Size(350, 350);

@@ -1,0 +1,8 @@
+lol path
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Riot Games\RADS LocalRootFolder
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Riot Games\RADS LocalRootFolder
+
+files to change
+C:\Riot Games\League of Legends\RADS\system\system.cfg
+C:\Riot Games\League of Legends\RADS\system\launcher.cfg
+C:\Riot Games\League of Legends\RADS\projects\lol_air_client\releases\0.0.0.50\deploy\lol.properties
