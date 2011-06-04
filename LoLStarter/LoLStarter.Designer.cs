@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoLStarter));
-            this.Servers = new System.Windows.Forms.TabControl();
+            this.tcUI = new System.Windows.Forms.TabControl();
             this.tabServers = new System.Windows.Forms.TabPage();
             this.gbUS = new System.Windows.Forms.GroupBox();
             this.btnUS = new System.Windows.Forms.Button();
@@ -39,6 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEU = new System.Windows.Forms.Button();
             this.tabSettings = new System.Windows.Forms.TabPage();
+            this.gbFolder = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tbInstallpath = new System.Windows.Forms.TextBox();
             this.gbEULang = new System.Windows.Forms.GroupBox();
             this.rbPL = new System.Windows.Forms.RadioButton();
             this.rbES = new System.Windows.Forms.RadioButton();
@@ -48,26 +51,28 @@
             this.tabAbout = new System.Windows.Forms.TabPage();
             this.rtbAbout = new System.Windows.Forms.RichTextBox();
             this.ttLang = new System.Windows.Forms.ToolTip(this.components);
-            this.Servers.SuspendLayout();
+            this.fbdInstallFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.tcUI.SuspendLayout();
             this.tabServers.SuspendLayout();
             this.gbUS.SuspendLayout();
             this.gbEU.SuspendLayout();
             this.tabSettings.SuspendLayout();
+            this.gbFolder.SuspendLayout();
             this.gbEULang.SuspendLayout();
             this.tabAbout.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Servers
+            // tcUI
             // 
-            this.Servers.Controls.Add(this.tabServers);
-            this.Servers.Controls.Add(this.tabSettings);
-            this.Servers.Controls.Add(this.tabAbout);
-            this.Servers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Servers.Location = new System.Drawing.Point(0, 0);
-            this.Servers.Name = "Servers";
-            this.Servers.SelectedIndex = 0;
-            this.Servers.Size = new System.Drawing.Size(344, 322);
-            this.Servers.TabIndex = 0;
+            this.tcUI.Controls.Add(this.tabServers);
+            this.tcUI.Controls.Add(this.tabSettings);
+            this.tcUI.Controls.Add(this.tabAbout);
+            this.tcUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcUI.Location = new System.Drawing.Point(0, 0);
+            this.tcUI.Name = "tcUI";
+            this.tcUI.SelectedIndex = 0;
+            this.tcUI.Size = new System.Drawing.Size(344, 261);
+            this.tcUI.TabIndex = 0;
             // 
             // tabServers
             // 
@@ -76,7 +81,7 @@
             this.tabServers.Location = new System.Drawing.Point(4, 22);
             this.tabServers.Name = "tabServers";
             this.tabServers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServers.Size = new System.Drawing.Size(336, 296);
+            this.tabServers.Size = new System.Drawing.Size(336, 235);
             this.tabServers.TabIndex = 0;
             this.tabServers.Text = "Servers";
             this.tabServers.UseVisualStyleBackColor = true;
@@ -84,7 +89,7 @@
             // gbUS
             // 
             this.gbUS.Controls.Add(this.btnUS);
-            this.gbUS.Location = new System.Drawing.Point(8, 134);
+            this.gbUS.Location = new System.Drawing.Point(8, 127);
             this.gbUS.Name = "gbUS";
             this.gbUS.Size = new System.Drawing.Size(320, 100);
             this.gbUS.TabIndex = 3;
@@ -99,6 +104,7 @@
             this.btnUS.TabIndex = 0;
             this.btnUS.Text = "Start";
             this.btnUS.UseVisualStyleBackColor = true;
+            this.btnUS.Click += new System.EventHandler(this.btnUS_Click);
             // 
             // gbEU
             // 
@@ -138,17 +144,48 @@
             this.btnEU.TabIndex = 0;
             this.btnEU.Text = "Start";
             this.btnEU.UseVisualStyleBackColor = true;
+            this.btnEU.Click += new System.EventHandler(this.btnEU_Click);
             // 
             // tabSettings
             // 
+            this.tabSettings.Controls.Add(this.gbFolder);
             this.tabSettings.Controls.Add(this.gbEULang);
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(336, 296);
+            this.tabSettings.Size = new System.Drawing.Size(336, 235);
             this.tabSettings.TabIndex = 1;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
+            // 
+            // gbFolder
+            // 
+            this.gbFolder.Controls.Add(this.btnSearch);
+            this.gbFolder.Controls.Add(this.tbInstallpath);
+            this.gbFolder.Location = new System.Drawing.Point(8, 152);
+            this.gbFolder.Name = "gbFolder";
+            this.gbFolder.Size = new System.Drawing.Size(320, 75);
+            this.gbFolder.TabIndex = 2;
+            this.gbFolder.TabStop = false;
+            this.gbFolder.Text = "Installationfolder League of Legends";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(239, 46);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tbInstallpath
+            // 
+            this.tbInstallpath.Enabled = false;
+            this.tbInstallpath.Location = new System.Drawing.Point(6, 19);
+            this.tbInstallpath.Name = "tbInstallpath";
+            this.tbInstallpath.Size = new System.Drawing.Size(308, 20);
+            this.tbInstallpath.TabIndex = 1;
             // 
             // gbEULang
             // 
@@ -226,7 +263,7 @@
             this.tabAbout.Controls.Add(this.rtbAbout);
             this.tabAbout.Location = new System.Drawing.Point(4, 22);
             this.tabAbout.Name = "tabAbout";
-            this.tabAbout.Size = new System.Drawing.Size(336, 296);
+            this.tabAbout.Size = new System.Drawing.Size(336, 235);
             this.tabAbout.TabIndex = 2;
             this.tabAbout.Text = "About";
             this.tabAbout.UseVisualStyleBackColor = true;
@@ -235,33 +272,34 @@
             // 
             this.rtbAbout.BackColor = System.Drawing.Color.White;
             this.rtbAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbAbout.Location = new System.Drawing.Point(8, 245);
+            this.rtbAbout.Location = new System.Drawing.Point(3, 8);
             this.rtbAbout.Name = "rtbAbout";
             this.rtbAbout.ReadOnly = true;
-            this.rtbAbout.Size = new System.Drawing.Size(153, 43);
+            this.rtbAbout.Size = new System.Drawing.Size(330, 224);
             this.rtbAbout.TabIndex = 0;
-            this.rtbAbout.Text = "LoL-Starter v1.0\n\nCopyRight © Jeroen Buyssens";
+            this.rtbAbout.Text = "LoL-Starter v1.0\n\n\n\n\n\n\n\n\n\nWritten in Visual C#\n\nLicense: GPLv3\n\nSource: https://l" +
+                "ol-server-selecter.googlecode.com/svn/trunk\n\nCopyRight © T0kar0";
             // 
             // LoLStarter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 322);
-            this.Controls.Add(this.Servers);
+            this.ClientSize = new System.Drawing.Size(344, 261);
+            this.Controls.Add(this.tcUI);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(350, 350);
-            this.MinimumSize = new System.Drawing.Size(350, 350);
             this.Name = "LoLStarter";
             this.Text = "LoL-Starter";
             this.Load += new System.EventHandler(this.LoLStarter_Load);
-            this.Servers.ResumeLayout(false);
+            this.tcUI.ResumeLayout(false);
             this.tabServers.ResumeLayout(false);
             this.gbUS.ResumeLayout(false);
             this.gbEU.ResumeLayout(false);
             this.gbEU.PerformLayout();
             this.tabSettings.ResumeLayout(false);
+            this.gbFolder.ResumeLayout(false);
+            this.gbFolder.PerformLayout();
             this.gbEULang.ResumeLayout(false);
             this.gbEULang.PerformLayout();
             this.tabAbout.ResumeLayout(false);
@@ -271,7 +309,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl Servers;
+        private System.Windows.Forms.TabControl tcUI;
         private System.Windows.Forms.TabPage tabServers;
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.TabPage tabAbout;
@@ -289,6 +327,10 @@
         private System.Windows.Forms.Button btnEU;
         private System.Windows.Forms.ToolTip ttLang;
         private System.Windows.Forms.Label lbCurLang;
+        private System.Windows.Forms.FolderBrowserDialog fbdInstallFolder;
+        private System.Windows.Forms.GroupBox gbFolder;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbInstallpath;
     }
 }
 
